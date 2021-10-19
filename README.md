@@ -1,2 +1,0 @@
-# olympschool
-Website for olympschool

@@ -1,0 +1,28 @@
+.description {
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+    height: 100vh;
+    background: #3c0342;
+    color: white;
+    font-size: large;
+    padding-left: 6vw;
+    padding-right: 6vw;
+}
+
+.description-header {
+    /*margin-top: 0px;*/
+    margin-bottom: 0;
+}
+
+.description-text {
+    white-space: pre-line;
+    display: flex;
+    justify-self: start;
+    align-self: start;
+    font-weight: 300;
+    text-align: start;
+    /*font-size: x-large;*/
+    /*margin-left: 0;*/
+}
+

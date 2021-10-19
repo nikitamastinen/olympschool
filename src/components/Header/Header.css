@@ -1,0 +1,80 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    border-radius: 40px;
+    background: white;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    /*justify-content: space-between;*/
+    height: 100vh;
+    padding: 20px;
+    border-radius: 40px;
+    background: white;
+    /*justify-content: center;*/
+}
+
+.header-text {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 0;
+    font-size: 5.5vw;
+    font-weight: 400;
+    color: black;
+}
+
+.header-description {
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-size: 2vw;
+    font-weight: 300;
+}
+
+@media all and (max-width: 780px) {
+ .header-description {
+    font-size: 16px;
+  }
+
+  .header-enroll-button {
+      font-size: 16px;
+      padding: 20px 20px;
+  }
+}
+
+.header-enroll-button {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    background: red;
+    color: white;
+    border: none;
+    font-size: 2vw;
+    padding: 1.5vw 1.5vw;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.header-enroll-button:hover {
+    background: #880606;
+    color: white;
+}
+
+.header-figure {
+    display: flex;
+    justify-content: space-around;
+    /*margin-top: 15vh;*/
+}
+
+.dot {
+    position: relative;
+    border-radius: 50%;
+    display: inline-block;
+    background: #ff0000;
+    /*background-attachment: fixed;*/
+}

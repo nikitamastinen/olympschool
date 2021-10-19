@@ -1,0 +1,58 @@
+.toolbar {
+    width: 100%;
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 6;
+    /*background: rgb(131,58,180);*/
+    justify-content: space-between;
+    padding: 2.5vh;
+    font-size: 1.5vw;
+    font-weight: 500;
+    box-shadow:0 1px black;
+    background: white;
+    /*background: #ffe66c;*/
+}
+
+.toolbar-mobile {
+    width: 100%;
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 6;
+    background: white;
+    justify-content: space-between;
+    padding: 2.5vh;
+    font-size: 3.5vw;
+    font-weight: 500;
+    box-shadow:0 2px 4px rgb(199, 198, 198);
+    /*background: #ffe66c;*/
+}
+
+.toolbar-logo {
+    display: flex;
+    justify-content: flex-start;
+    width: 45%;
+}
+
+.toolbar-navigation {
+    width: 55%;
+    display: flex;
+    /*font-weight: 250;*/
+    justify-content: space-around;
+}
+
+.toolbar-link {
+    position: relative;
+    cursor: pointer;
+    /*padding-left: 28px;*/
+}
+
+.toolbar-link:hover {
+    color: red;
+    text-decoration-line: underline;
+    text-decoration-thickness: 0.7vh;
+    text-underline-offset: 2.4vh;
+    text-decoration-color: red;
+    cursor: pointer;
+}
