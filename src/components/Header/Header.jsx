@@ -1,6 +1,4 @@
 import './Header.css'
-import useResizeObserver from "use-resize-observer";
-import {useRef, useState} from "react";
 
 const Header = () => {
 
@@ -10,7 +8,7 @@ const Header = () => {
   }
 
   return (
-    <div className='wrapper' style={{height: `${window.innerHeight}px`}}>
+    <div className='wrapper' style={{height: `calc(${window.innerHeight}px - 8vh)`}}>
       <div className='header'>
         <div className='header-text'>
           Победителями олимпиад становятся здесь

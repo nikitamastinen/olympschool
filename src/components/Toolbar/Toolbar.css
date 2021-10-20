@@ -2,14 +2,20 @@
     width: 100%;
     display: flex;
     position: fixed;
+    flex-direction: row;
     z-index: 6;
     /*background: rgb(131,58,180);*/
     justify-content: space-between;
-    padding: 2.5vh;
+    height: 8vh;
+    text-align: center;
     font-size: 1.5vw;
-    font-weight: 500;
-    box-shadow: 0 1px black;
-    background: white;
+    font-weight: 700;
+    /*box-shadow: 0 1px black;*/
+    /*border-bottom: solid white 1px;*/
+    /*background: #383535;*/
+    /*color: white;*/
+    cursor: pointer;
+    color: white;
     /*background: #ffe66c;*/
 }
 
@@ -19,19 +25,22 @@
     position: fixed;
     top: 0;
     z-index: 6;
-    background: white;
-    justify-content: space-between;
-    padding: 2.5vh;
+    /*background: white;*/
+    justify-content: space-around;
+
     font-size: 3.5vw;
+    height: 8vh;
     font-weight: 500;
+    color: white;
     /*box-shadow:0 1px black;*/
     /*background: #ffe66c;*/
 }
 
 .toolbar-logo {
     display: flex;
-    justify-content: flex-start;
-    width: 45%;
+    align-self: center;
+    position: relative;
+    cursor: pointer;
 }
 
 .toolbar-navigation {
@@ -41,24 +50,53 @@
     justify-content: space-around;
 }
 
+.toolbar-logo-wrapper {
+    padding-left: 20px;
+    display: flex;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    /*position: relative;*/
+    cursor: pointer;
+    height: 8vh;
+}
+
+.toolbar-link-wrapper {
+    display: flex;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    /*position: relative;*/
+    cursor: pointer;
+    height: 8vh;
+}
+
+.toolbar-link-wrapper:hover {
+    border-top: solid white 10px;
+    margin-top: -10px;
+    color: white;
+}
+
 .toolbar-link {
+    display: flex;
+    align-self: center;
     position: relative;
     cursor: pointer;
-    /*padding-left: 28px;*/
 }
 
-.toolbar-link:hover {
-    color: red;
-    text-decoration-line: underline;
-    text-decoration-thickness: 0.7vh;
-    text-underline-offset: 2.4vh;
-    text-decoration-color: red;
-    cursor: pointer;
-}
+/*.toolbar-link:hover {*/
+/*    color: red;*/
+/*    !*text-decoration-line: underline;*!*/
+/*    !*text-decoration-thickness: 0.7vh;*!*/
+/*    !*text-underline-offset: 2vh;*!*/
+/*    !*text-decoration-color: red;*!*/
+/*    border-bottom: solid red 2px;*/
+/*    cursor: pointer;*/
+/*}*/
 
-@media (max-width: 780px) {
+/*@media (max-width: 780px) {*/
 
-    .toolbar-link:hover {
-        text-underline-offset: calc(2.5vh - 0.5vh);
-    }
-}
+/*    .toolbar-link:hover {*/
+/*        text-underline-offset: 2vh;*/
+/*    }*/
+/*}*/

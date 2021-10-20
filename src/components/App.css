@@ -1,10 +1,23 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .paper {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  color: black;
+
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+.margin-toolbar {
+    background-attachment: fixed;
+    background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.44)), url("https://lh3.googleusercontent.com/proxy/zT7IOV9LtfgtCKGvsz2VJ-nJ0ZZYE_oyw_Lag0e1LAH88U31I-za0H4wbpWlJCvHQTnc8KTeQvsHedjjriXPOZZCovqapBACZoBRCe1J8Z1fWoc6Yt9IuCzpRO5dDiXr2dAzP1TawprE6f0JY2zXBwr73AM") no-repeat;
+     -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
 }

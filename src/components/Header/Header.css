@@ -1,11 +1,11 @@
 .wrapper {
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100vh;
-    border-radius: 40px;
-    background: white;
+    /*height: 100vh;*/
+    /*background: white;*/
+    background-repeat: no-repeat;
+    color: white;
 }
 
 .header {
@@ -13,25 +13,19 @@
     display: flex;
     width: 100%;
     flex-direction: column;
-    /*justify-content: space-between;*/
     height: 100%;
-    /*padding: 20px;*/
-    border-radius: 40px;
-    background: white;
-    /*justify-content: center;*/
 }
 
 .header-text {
     margin: 10vh 15% 0;
     font-size: 5.5vw;
     font-weight: 400;
-    color: black;
 }
 
 .header-description {
     margin: 20px 10px 25px;
     font-size: 2vw;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .header-enroll-button {

@@ -1,26 +1,72 @@
 import './Toolbar.css'
 import {isMobile} from "../../globals";
-import {useEffect} from "react";
+import {useDispatch} from "react-redux";
 
 const Toolbar = () => {
+  const dispatch = useDispatch();
+
+  const handleNavigationChange = (event, eventType) => {
+    dispatch({type: "page", payload: eventType});
+  }
 
   return (
     <div>
       {
         !isMobile() ?
           <div className='toolbar'>
-            <a className='toolbar-logo'>Центр олимпиадной подготовки</a>
+            <div onClick={
+              (event) => handleNavigationChange(event, 'main')
+            } className='toolbar-logo-wrapper'>
+            <div  className='toolbar-logo'>Центр олимпиадной подготовки
+            </div>
+            </div>
             <div className='toolbar-navigation'>
-              <a className='toolbar-link'>Записаться на курс</a>
-              <a className='toolbar-link'>Программа</a>
-              <a className='toolbar-link'>Преподаватели</a>
-              <a className='toolbar-link'>На главную</a>
+              <div onClick={
+                  (event) => handleNavigationChange(event, 'enroll')
+                } className='toolbar-link-wrapper'>
+                <div className='toolbar-link'> Записаться на курс
+                </div>
+              </div>
+              <div onClick={
+                  (event) => handleNavigationChange(event, 'program')
+                } className='toolbar-link-wrapper'>
+                <div className='toolbar-link'>Программа
+                </div>
+              </div>
+              <div onClick={
+                  (event) => handleNavigationChange(event, 'teachers')
+                } className='toolbar-link-wrapper'>
+                <div className='toolbar-link'>Преподаватели
+                </div>
+              </div>
+              <div onClick={
+                  (event) => handleNavigationChange(event, 'main')
+                } className='toolbar-link-wrapper'>
+                <div className='toolbar-link'>На главную
+                </div>
+              </div>
             </div>
           </div> :
+
           <div className='toolbar-mobile'>
-            <a className='toolbar-link'>Записаться на курс</a>
-            <a className='toolbar-link'>Программа</a>
-            <a className='toolbar-link'>Преподаватели</a>
+            <div onClick={
+                (event) => handleNavigationChange(event, 'enroll')
+              } className='toolbar-link-wrapper'>
+              <div className='toolbar-link'> Записаться на курс
+              </div>
+            </div>
+            <div onClick={
+                (event) => handleNavigationChange(event, 'program')
+              } className='toolbar-link-wrapper'>
+              <div className='toolbar-link'> Программа
+              </div>
+            </div>
+            <div onClick={
+                (event) => handleNavigationChange(event, 'teachers')
+              } className='toolbar-link-wrapper'>
+              <div  className='toolbar-link'>Преподаватели
+              </div>
+            </div>
           </div>
       }
     </div>
