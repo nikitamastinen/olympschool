@@ -1,15 +1,14 @@
 .toolbar {
     width: 100%;
     display: flex;
-    position: sticky;
-    top: 0;
+    position: fixed;
     z-index: 6;
     /*background: rgb(131,58,180);*/
     justify-content: space-between;
     padding: 2.5vh;
     font-size: 1.5vw;
     font-weight: 500;
-    box-shadow:0 1px black;
+    box-shadow: 0 1px black;
     background: white;
     /*background: #ffe66c;*/
 }
@@ -17,7 +16,7 @@
 .toolbar-mobile {
     width: 100%;
     display: flex;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 6;
     background: white;
@@ -25,7 +24,7 @@
     padding: 2.5vh;
     font-size: 3.5vw;
     font-weight: 500;
-    box-shadow:0 2px 4px rgb(199, 198, 198);
+    /*box-shadow:0 1px black;*/
     /*background: #ffe66c;*/
 }
 
@@ -55,4 +54,11 @@
     text-underline-offset: 2.4vh;
     text-decoration-color: red;
     cursor: pointer;
+}
+
+@media (max-width: 780px) {
+
+    .toolbar-link:hover {
+        text-underline-offset: calc(2.5vh - 0.5vh);
+    }
 }

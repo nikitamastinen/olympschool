@@ -5,7 +5,7 @@ import {useEffect} from "react";
 const Toolbar = () => {
 
   return (
-    <>
+    <div>
       {
         !isMobile() ?
           <div className='toolbar'>
@@ -23,7 +23,7 @@ const Toolbar = () => {
             <a className='toolbar-link'>Преподаватели</a>
           </div>
       }
-    </>
+    </div>
   );
 }
 

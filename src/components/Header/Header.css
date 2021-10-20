@@ -1,4 +1,5 @@
 .wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -13,38 +14,24 @@
     width: 100%;
     flex-direction: column;
     /*justify-content: space-between;*/
-    height: 100vh;
-    padding: 20px;
+    height: 100%;
+    /*padding: 20px;*/
     border-radius: 40px;
     background: white;
     /*justify-content: center;*/
 }
 
 .header-text {
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-bottom: 0;
+    margin: 10vh 15% 0;
     font-size: 5.5vw;
     font-weight: 400;
     color: black;
 }
 
 .header-description {
-    margin-top: 20px;
-    margin-bottom: 25px;
+    margin: 20px 10px 25px;
     font-size: 2vw;
     font-weight: 300;
-}
-
-@media all and (max-width: 780px) {
- .header-description {
-    font-size: 16px;
-  }
-
-  .header-enroll-button {
-      font-size: 16px;
-      padding: 20px 20px;
-  }
 }
 
 .header-enroll-button {
@@ -60,6 +47,7 @@
     cursor: pointer;
 }
 
+
 .header-enroll-button:hover {
     background: #880606;
     color: white;
@@ -67,14 +55,44 @@
 
 .header-figure {
     display: flex;
+    margin-left: 15%;
+    margin-right: 15%;
     justify-content: space-around;
-    /*margin-top: 15vh;*/
 }
 
 .dot {
-    position: relative;
     border-radius: 50%;
     display: inline-block;
     background: #ff0000;
-    /*background-attachment: fixed;*/
+}
+
+.header-continue {
+    color: white;
+    font-size: 2vw;
+    text-align: center;
+    position: fixed;
+    z-index: 100;
+    background: #5e0b0b;
+    padding: 10px;
+    bottom: 0;
+    width: 100vw;
+}
+
+@media (max-width: 780px) {
+ .header-text {
+     font-size: 40px;
+ }
+
+ .header-description {
+    font-size: 16px;
+  }
+
+  .header-enroll-button {
+      font-size: 16px;
+      padding: 10px 10px;
+  }
+
+  .header-continue {
+      font-size: 16px;
+  }
 }
