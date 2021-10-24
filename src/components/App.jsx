@@ -14,6 +14,7 @@ import Program from "./Program/Program";
 import Teachers from "./Teachers/Teachers";
 
 import Enroll from "./Enroll/Enroll";
+import MainPage from "./MainPage/MainPage";
 
 function App() {
 
@@ -24,22 +25,30 @@ function App() {
   useEffect(() => {
     if (navigationPageType === 'main') {
       setToolbarColor('white');
-      setToolbarBackground('transparent')
+      setToolbarBackground('black');
     } else {
       setToolbarColor('white');
       setToolbarBackground('black');
     }
   }, [navigationPageType])
 
+  const [initHeight, setInitHeight] = useState(null);
   const [dimensions, setDimensions] = useState({
     width: window.innerWidth,
+    height: window.innerHeight
   });
   console.log(dimensions);
   const handleResize = () => {
     setDimensions({
       width: window.innerWidth,
+      height: window.innerHeight,
     });
   }
+
+  useEffect(() => {
+    setInitHeight(window.innerHeight);
+  }, []);
+
   useEffect(() => {
     window.addEventListener("resize", handleResize, false);
   }, []);
@@ -49,39 +58,39 @@ function App() {
       <Toolbar
         background={toolbarBackground}
         color={toolbarColor}
+        height={initHeight * 0.08}
       />
       <div className={navigationPageType === 'main' && 'margin-toolbar'}
            style={{
-             height: `100vh`,
-             paddingTop: !isMobile() ? 'calc(8vh)' : 'calc(8vh)',
+             height:`${window.outerHeight}px` ,
+             paddingTop: `${initHeight * 0.08}px`,
            }}
       >
-        <div className='paper'>
-          {
-            navigationPageType === 'main' &&
-            <>
-              <Header/>
-              <Description/>
-            </>
-          }
-          {
-            navigationPageType === 'program' &&
-            <>
-              <Program/>
-            </>
-          }
-          {
-            navigationPageType === 'teachers' &&
-            <>
-              <Teachers/>
-            </>
-          }
-          {
-            navigationPageType === 'enroll' &&
-            <>
-              <Enroll/>
-            </>
-          }
+      <div className='paper'>
+        {
+          navigationPageType === 'main' &&
+          <>
+            <MainPage/>
+          </>
+        }
+        {
+          navigationPageType === 'program' &&
+          <>
+            <Program/>
+          </>
+        }
+        {
+          navigationPageType === 'teachers' &&
+          <>
+            <Teachers/>
+          </>
+        }
+        {
+          navigationPageType === 'enroll' &&
+          <>
+            <Enroll/>
+          </>
+        }
 
         </div>
       </div>

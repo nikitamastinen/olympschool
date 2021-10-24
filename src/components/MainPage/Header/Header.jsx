@@ -1,14 +1,41 @@
 import './Header.css'
+import {useEffect, useRef, useState} from "react";
 
 const Header = () => {
 
   let figureSizes = [];
   for (let i = 0; i < 40; i++) {
-      figureSizes[i] = 90;
+    figureSizes[i] = 90;
   }
 
+  const bottomOfHeader = useRef(null);
+  const scrollToBottomOfPage = () => {
+    alert("kek");
+    bottomOfHeader.current.scrollIntoView()
+  }
+
+
+  const [initialWindowHeight, setInitialWindowHeight] = useState(null);
+  const [moreButton, setMoreButton] = useState(null);
+
+  useEffect(() => {
+    setInitialWindowHeight(window.innerHeight * 0.92);
+    window.addEventListener('scroll', (event) => {
+      setMoreButton('none');
+    });
+  }, [])
+
   return (
-    <div className='wrapper' style={{height: `calc(${window.innerHeight}px - 8vh)`}}>
+    <div className='wrapper' style={{height: `${initialWindowHeight}px`}}>
+      {/*<div className='header-image-filter'>*/}
+      <img className='header-image'
+           style={{
+             minHeight: `${initialWindowHeight}px`,
+             minWidth: `100%`,
+           }}
+           src='https://mskrnews.ru/wp-content/uploads/2019/04/moskovskie-shkolniki-zavoevali-67-nagrad-v-finale-vserossijskoj-olimpiady.jpg'
+           alt={'olympiad-center'}/>
+      {/*</div>*/}
       <div className='header'>
         <div className='header-text'>
           Победителями олимпиад становятся здесь
@@ -34,7 +61,7 @@ const Header = () => {
         {/*    })*/}
         {/*  }*/}
         {/*</div>*/}
-        <div className='header-continue'>
+        <div ref={bottomOfHeader} className='header-continue' onClick={scrollToBottomOfPage}>
           Узнать подробнее   &#709;
         </div>
       </div>

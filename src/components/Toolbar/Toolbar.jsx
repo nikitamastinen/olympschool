@@ -15,7 +15,8 @@ const Toolbar = (props) => {
         !isMobile() ?
           <div className='toolbar' style={{
             background: props.background,
-            color: props.color
+            color: props.color,
+            height: `${props.height}px`,
           }}>
             {/*<div className='toolbar-wrapper'>*/}
               <div onClick={
@@ -56,6 +57,7 @@ const Toolbar = (props) => {
           <div className='toolbar-mobile' style={{
             background: props.background,
             color: props.color,
+            height: `${props.height}px`,
           }}>
             <div onClick={
               (event) => handleNavigationChange(event, 'enroll')
