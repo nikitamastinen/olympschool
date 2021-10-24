@@ -1,23 +1,19 @@
 .App {
     text-align: center;
+    transition: height 999999s
 }
 
 .paper {
-
+    /*max-width: 2000px;*/
     display: flex;
     flex-direction: column;
     color: black;
 }
 
-.margin-toolbar {
+.margin-toolbar{
     background-attachment: fixed;
-    background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.44)), url("https://lh3.googleusercontent.com/proxy/zT7IOV9LtfgtCKGvsz2VJ-nJ0ZZYE_oyw_Lag0e1LAH88U31I-za0H4wbpWlJCvHQTnc8KTeQvsHedjjriXPOZZCovqapBACZoBRCe1J8Z1fWoc6Yt9IuCzpRO5dDiXr2dAzP1TawprE6f0JY2zXBwr73AM") no-repeat;
-     -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.74), rgba(28, 2, 2, 0.44)), url("https://mskrnews.ru/wp-content/uploads/2019/04/moskovskie-shkolniki-zavoevali-67-nagrad-v-finale-vserossijskoj-olimpiady.jpg") no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
-    background-size: cover;
-    height: 100vh;
 }

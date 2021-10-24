@@ -1,7 +1,7 @@
 .description {
     display: flex;
     flex-direction: column;
-    z-index: 5;
+    z-index: 7;
     /*height: 100vh;*/
     background: #3c0342;
     color: white;

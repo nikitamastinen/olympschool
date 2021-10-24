@@ -6,25 +6,38 @@ import {isMobile} from "../globals";
 
 import Toolbar from "./Toolbar/Toolbar";
 
-import Header from "./Header/Header";
-import Description from "./Description/Description";
+import Header from "./MainPage/Header/Header";
+import Description from "./MainPage/Description/Description";
 
 import Program from "./Program/Program";
 
 import Teachers from "./Teachers/Teachers";
 
+import Enroll from "./Enroll/Enroll";
+
 function App() {
+
   const navigationPageType = useSelector(state => state.page);
+  const [toolbarBackground, setToolbarBackground] = useState(null);
+  const [toolbarColor, setToolbarColor] = useState(null);
+
+  useEffect(() => {
+    if (navigationPageType === 'main') {
+      setToolbarColor('white');
+      setToolbarBackground('transparent')
+    } else {
+      setToolbarColor('white');
+      setToolbarBackground('black');
+    }
+  }, [navigationPageType])
 
   const [dimensions, setDimensions] = useState({
     width: window.innerWidth,
-    height: window.innerHeight,
   });
   console.log(dimensions);
   const handleResize = () => {
     setDimensions({
       width: window.innerWidth,
-      height: window.innerHeight,
     });
   }
   useEffect(() => {
@@ -33,9 +46,13 @@ function App() {
 
   return (
     <div className='App'>
-      <Toolbar/>
-      <div className='margin-toolbar'
+      <Toolbar
+        background={toolbarBackground}
+        color={toolbarColor}
+      />
+      <div className={navigationPageType === 'main' && 'margin-toolbar'}
            style={{
+             height: `100vh`,
              paddingTop: !isMobile() ? 'calc(8vh)' : 'calc(8vh)',
            }}
       >
@@ -57,6 +74,12 @@ function App() {
             navigationPageType === 'teachers' &&
             <>
               <Teachers/>
+            </>
+          }
+          {
+            navigationPageType === 'enroll' &&
+            <>
+              <Enroll/>
             </>
           }
 

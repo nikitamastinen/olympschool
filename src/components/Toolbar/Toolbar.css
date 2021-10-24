@@ -19,6 +19,12 @@
     /*background: #ffe66c;*/
 }
 
+/*.toolbar-wrapper {*/
+/*    !*max-width: 2000px;*!*/
+/*    display: flex;*/
+/*}*/
+
+
 .toolbar-mobile {
     width: 100%;
     display: flex;
