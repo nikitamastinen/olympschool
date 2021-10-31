@@ -25,10 +25,11 @@ function App() {
   useEffect(() => {
     if (navigationPageType === 'main') {
       setToolbarColor('white');
-      setToolbarBackground('black');
+      //setToolbarBackground('#b1040e');
+      setToolbarBackground('transparent')
     } else {
       setToolbarColor('white');
-      setToolbarBackground('black');
+      setToolbarBackground('#b1040e');
     }
   }, [navigationPageType])
 
@@ -88,6 +89,11 @@ function App() {
         {
           navigationPageType === 'enroll' &&
           <>
+            {/*<div style={{overflow: "hidden", position: "absolute"}}>*/}
+              <div className='circle3'></div>
+            {/*<div className='circle'></div>*/}
+            {/*<div className='circle2'></div>*/}
+            {/*<div className='triangle'></div>*/}
             <Enroll/>
           </>
         }

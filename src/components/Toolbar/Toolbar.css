@@ -3,7 +3,6 @@
     display: flex;
     position: fixed;
     flex-direction: row;
-    z-index: 6;
     /*background: rgb(131,58,180);*/
     justify-content: space-between;
     /*height: 8vh;*/
@@ -11,11 +10,13 @@
     font-size: 1.5vw;
     font-weight: 700;
     /*box-shadow: 0 1px black;*/
-    /*border-bottom: solid white 1px;*/
+    /* border-bottom: solid black 1px; */
     /*background: #383535;*/
     /*color: white;*/
     cursor: pointer;
     color: white;
+    background: #880606;
+    z-index: 600;
     /*background: #ffe66c;*/
 }
 
@@ -49,10 +50,12 @@
 }
 
 .toolbar-navigation {
-    width: 55%;
+    width: 45%;
     display: flex;
     /*font-weight: 250;*/
     justify-content: space-around;
+    right: 0;
+    margin-right: 20px;
 }
 
 .toolbar-logo-wrapper {
@@ -74,12 +77,13 @@
     /*position: relative;*/
     cursor: pointer;
     height: 8vh;
+    font-weight: 500;
 }
 
 .toolbar-link-wrapper:hover {
     border-top: solid white 10px;
     margin-top: -10px;
-    color: white;
+    /* color: white; */
 }
 
 .toolbar-link {

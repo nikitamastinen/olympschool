@@ -1,5 +1,10 @@
 .enroll-header {
-    margin-top: 20px;
-    margin-bottom: 0;
-    color: #330433;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    /*color: black;*/
+    font-size: 40px;
+    /*align-self: start;*/
+    /*justify-self: start;*/
+    /*margin-left: 60px;*/
+    color: white;
 }

@@ -3,6 +3,10 @@ import {useEffect, useRef, useState} from "react";
 
 const Header = () => {
 
+  const [initialWindowHeight, setInitialWindowHeight] = useState(null);
+  const [moreButton, setMoreButton] = useState(null);
+
+
   let figureSizes = [];
   for (let i = 0; i < 40; i++) {
     figureSizes[i] = 90;
@@ -10,13 +14,8 @@ const Header = () => {
 
   const bottomOfHeader = useRef(null);
   const scrollToBottomOfPage = () => {
-    alert("kek");
-    bottomOfHeader.current.scrollIntoView()
+    window.scrollBy(0, initialWindowHeight);
   }
-
-
-  const [initialWindowHeight, setInitialWindowHeight] = useState(null);
-  const [moreButton, setMoreButton] = useState(null);
 
   useEffect(() => {
     setInitialWindowHeight(window.innerHeight * 0.92);

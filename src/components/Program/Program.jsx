@@ -1,7 +1,6 @@
 import './Program.css'
 
 const Program = () => {
-
   return (
     <h1 className='program-header'>
       Программа Центра

@@ -17,6 +17,7 @@ const Toolbar = (props) => {
             background: props.background,
             color: props.color,
             height: `${props.height}px`,
+
           }}>
             {/*<div className='toolbar-wrapper'>*/}
               <div onClick={
@@ -29,19 +30,19 @@ const Toolbar = (props) => {
                 <div onClick={
                   (event) => handleNavigationChange(event, 'enroll')
                 } className='toolbar-link-wrapper'>
-                  <div className='toolbar-link'> Записаться на курс
-                  </div>
-                </div>
-                <div onClick={
-                  (event) => handleNavigationChange(event, 'program')
-                } className='toolbar-link-wrapper'>
-                  <div className='toolbar-link'>Программа
+                  <div className='toolbar-link'> Курсы
                   </div>
                 </div>
                 <div onClick={
                   (event) => handleNavigationChange(event, 'teachers')
                 } className='toolbar-link-wrapper'>
                   <div className='toolbar-link'>Преподаватели
+                  </div>
+                </div>
+                <div onClick={
+                  (event) => handleNavigationChange(event, 'program')
+                } className='toolbar-link-wrapper'>
+                  <div className='toolbar-link'>О нас
                   </div>
                 </div>
                 <div onClick={
@@ -62,7 +63,7 @@ const Toolbar = (props) => {
             <div onClick={
               (event) => handleNavigationChange(event, 'enroll')
             } className='toolbar-link-wrapper'>
-              <div className='toolbar-link'> Записаться на курс
+              <div className='toolbar-link'> Курсы
               </div>
             </div>
             <div onClick={
