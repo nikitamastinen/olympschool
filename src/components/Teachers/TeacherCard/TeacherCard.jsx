@@ -1,24 +1,43 @@
 import './TeacherCard.css'
 
 const TeacherCard = (props) => {
-
   return (
     <div className='teacher-card-wrapper'>
       <div className='teacher-card'>
-        <h2 style={{marginTop: '5px', marginBottom: '5px'}}>Альфред Нуртдинов</h2>
-        <b>Математика</b>
-        <div className='teacher-image-box'>
+        <div style={{
+          display: 'flex',
+        }}>
           <img className='teacher-image'
                src='https://image.shutterstock.com/image-photo/cat-professor-square-academic-hat-600w-1145803769.jpg'
                alt='teacher'/>
-          <img className='teacher-image'
-               src=' https://media.fulledu.ru/firms/covers/2018.04.21.01/thumbnail/100040000000000000165784.png'
-               alt='teacher'/>
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignSelf: 'center',
+            textAlign: 'center',
+            width: '100%',
+          }}>
+            <h3 style={{marginBottom: '10px'}}>Альфред Нуртдинов</h3>
+          </div>
         </div>
-        <h3 style={{marginTop: '5px', marginBottom: '5px'}}>Собственные заслуги</h3>
-        <div >
-          Математика - победитель Межгалактической олимпиады
-          призер
+        <div className='teacher-card-description'>
+          <div style={{marginTop: '10px'}}/>
+          <b>📎 Предмет</b>
+          {'- ' + props.data.subject}
+          <div style={{marginTop: '10px'}}/>
+          <b>📖 Образование</b>
+          {
+            props.data.education.map(place =>
+              <div>{'- ' + place}</div>
+            )
+          }
+          <div style={{marginTop: '10px'}}/>
+          <b>🏆 Заслуги</b>
+          {
+            props.data.achievements.map(achievement =>
+              <div>{'- ' + achievement}</div>
+            )
+          }
         </div>
       </div>
     </div>

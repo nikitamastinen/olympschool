@@ -1,6 +1,6 @@
 import './Teachers.css'
-import {CardRibbon} from "../Lib/CardRibbon/CardRibbon";
 import TeacherCard from "./TeacherCard/TeacherCard";
+import TEACHERS from "../../content/TEACHERS";
 
 const Teachers = () => {
 
@@ -9,13 +9,14 @@ const Teachers = () => {
       <h1>
         Наши преподаватели
       </h1>
-      <CardRibbon cards={
-        <>
-          <TeacherCard/>
-          <TeacherCard/>
-          <TeacherCard/>
-        </>
-      }/>
+      <div className='teachers-ribbon'>
+        {
+          TEACHERS.map(element =>
+            <TeacherCard data={element}/>
+          )
+
+        }
+      </div>
     </>
   );
 }

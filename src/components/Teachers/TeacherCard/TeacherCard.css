@@ -6,15 +6,31 @@
 }
 
 .teacher-card {
-    box-shadow: 0 4px 9px #c3cec3;
+    box-shadow: 0 3px 8px #5e5a5a;
     border-radius: 10px;
     /*height: 300px;*/
     display: flex;
     flex-direction: column;
     width: 100%;
-    background: azure;
-    padding-left: 20px;
-    padding-right: 20px;
+    background: #f6f6f6;
+    padding: 5px 20px;
+}
+
+.teacher-card-description {
+    width: 100%;
+    display: flex;
+    text-align: start;
+    align-items: start;
+    align-content: start;
+    flex-direction: column;
+    /*justify-content: start;*/
+    align-self: start;
+
+}
+
+.teacher-card-text {
+    margin-left: 0;
+    margin-top: 3px;
 }
 
 .teacher-image-box {
@@ -22,5 +38,5 @@
 }
 
 .teacher-image {
-    width: 50%;
+    width: 30%;
 }

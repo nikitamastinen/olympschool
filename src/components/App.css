@@ -15,9 +15,9 @@
     position: fixed;
     width: 200vw;
     height: 100vh;
-    margin-top: calc(-50vh - 8vh);
+    margin-top: calc(-60vh - 8vh);
     margin-left: -50vw;
-    background: #541f1f;
+    background: #7c1f1f;
     border-radius: 100%;
     z-index: 1;
 }

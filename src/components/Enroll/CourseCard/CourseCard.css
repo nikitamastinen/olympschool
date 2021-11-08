@@ -6,13 +6,13 @@
 }
 
 .course-card {
-    /*box-shadow: 0 4px 9px #c3cec3;*/
+    box-shadow: 0 2px 5px #949494;
     border-radius: 10px;
     /*height: 300px;*/
     display: flex;
     flex-direction: column;
     width: 100%;
-    background: #f1f0f0;
+    background: #f6f6f6;
     padding-left: 20px;
     padding-right: 20px;
 }

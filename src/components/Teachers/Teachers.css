@@ -1,6 +1,35 @@
 .teachers-header {
     display: flex;
+    font-family: s;
+    font-weight: 100;
     padding-left: 20px;
     padding-right: 20px;
     justify-content: center;
+}
+
+.teachers-ribbon {
+    overflow-y: auto;
+    display: flex;
+
+    /*grid-template-columns: 1fr 1fr 1fr;*/
+    /*grid-template-rows: 1fr 1fr;*/
+    /*grid-auto-flow: column;*/
+    /*grid-gap: 8px;*/
+    /*padding: 0 8px 16px 8px;*/
+}
+
+.teachers-ribbon > * {
+    flex: 0 0 33.3333%;
+}
+
+@media (max-width: 1300px) {
+    .teachers-ribbon > * {
+        flex: 0 0 50%;
+    }
+}
+
+@media (max-width: 780px) {
+    .teachers-ribbon > * {
+        flex: 0 0 100%;
+    }
 }
