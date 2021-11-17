@@ -28,16 +28,16 @@ const Timeline = (props) => {
         <b className='timeline-circle'>2</b>
         <b id='right-circle' className='timeline-circle'>3</b>
         <div className='timeline-card'>
-          <h4 style={{marginTop: 0, marginBottom: '5px'}}>Подать заявку на один из курсов ниже</h4>
-          <div style={{fontSize:"14px"}}>Мы свяжемся с вами по указанному контакту и договоримся о дате собеседования</div>
+          <h4 style={{marginTop: 0, marginBottom: '5px', fontSize: '24px'}}>Подать заявку на курсы выше</h4>
+          {/*<div style={{fontSize:"16px"}}>Мы свяжемся с вами по указанному контакту и ответим на ваши вопросы</div>*/}
         </div>
         <div className='timeline-card'>
-          <h4 style={{marginTop: 0, marginBottom: '5px'}}>Пройти собеседование</h4>
-          <div style={{fontSize:"14px"}}>Мы расскажем подробнее о выбранных вами курсах и с радостью ответим на все ваши вопросы</div>
+          <h4 style={{marginTop: 0, marginBottom: '5px', fontSize: '24px'}}>Мы </h4>
+          {/*<div style={{fontSize:"16px"}}>Мы расскажем подробнее о выбранных вами курсах и с радостью ответим на все ваши вопросы</div>*/}
         </div>
         <div className='timeline-card'>
-          <h4 style={{marginTop: 0, marginBottom: '5px'}}>Оплатить курс</h4>
-          <div style={{fontSize:"14px"}}>После этого мы направим приглашения в чаты занятий и дальнейшую информацию</div>
+          <h4 style={{marginTop: 0, marginBottom: '5px', fontSize: '24px'}}>Оплатить курс</h4>
+          {/*<div style={{fontSize:"16px"}}>После этого мы направим приглашения в чаты занятий и дальнейшую информацию</div>*/}
         </div>
       </div>
     </div>

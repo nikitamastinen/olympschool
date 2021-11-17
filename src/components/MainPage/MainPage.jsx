@@ -4,7 +4,7 @@ import Description from "./Description/Description";
 const MainPage = () => {
   return (
     <>
-      <image src={'url("https://mskrnews.ru/wp-content/uploads/2019/04/moskovskie-shkolniki-zavoevali-67-nagrad-v-finale-vserossijskoj-olimpiady.jpg'}/>
+      {/*<img src={'url("https://mskrnews.ru/wp-content/uploads/2019/04/moskovskie-shkolniki-zavoevali-67-nagrad-v-finale-vserossijskoj-olimpiady.jpg'} alt={'jet-school-olympiad-center'}/>*/}
       <Header/>
       <Description/>
     </>

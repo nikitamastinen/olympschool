@@ -1,0 +1,161 @@
+.close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+
+/*--------------------------------------------------------------------*/
+
+.application {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background: rgba(3, 3, 3, 0.75);
+    position: fixed;
+    z-index: 800;
+}
+
+.application-dialog {
+    margin-top: 60px;
+    display: flex;
+    position: fixed;
+    align-self: center;
+    align-content: center;
+    align-items: center;
+    justify-self: center;
+    border-radius: 20px;
+    background: #f9f6ef;;
+    padding: 20px 40px 20px 20px;
+    z-index: 801;
+    flex-direction: column;
+}
+
+.application-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+
+.application-chosen {
+    width: 50%;
+    height: 100%;
+}
+
+.application-input {
+    font-size: 20px;
+    font-weight: 530;
+    width: calc(100% - 40px);
+    padding: 20px;
+    border: none;
+    outline: solid 2px #006cb8;
+    border-radius: 30px;
+    margin: 20px 20px 0;
+    /*border:solid 1px black;*/
+}
+
+.application-input-long {
+    font-size: 20px;
+    font-weight: 530;
+    width: calc(100% - 40px);
+    padding: 20px;
+    border: none;
+    outline: solid 2px #006cb8;
+    border-radius: 30px;
+    margin: 20px 20px 0;
+    resize: none;
+    overflow: hidden;
+    /*border:solid 1px black;*/
+}
+
+.application-send {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+    border: none;
+    background: #006cb8;
+    cursor: pointer;
+    color: white;
+    margin: 20px auto 0;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 30px;
+    padding: 20px;
+    width: 200px;
+}
+
+.application-input-long::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 30px;
+}
+
+.application-input-long::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+
+
+
+/*---------------------------------------------------------------------------------------*/
+.cart {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background: #006cb8;
+    z-index: 700;
+    position: fixed;
+    bottom: 0;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    color: white;
+    font-size: 24px;
+}
+
+.cart-button {
+    display: flex;
+
+    color: black;
+    padding: 10px;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    background: white;
+}
+
+.cart-button:hover {
+
+}

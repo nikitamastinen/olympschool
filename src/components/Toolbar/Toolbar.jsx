@@ -1,6 +1,7 @@
 import './Toolbar.css'
 import {isMobile} from "../../globals";
 import {useDispatch} from "react-redux";
+import {shift} from "../../globals"
 
 const Toolbar = (props) => {
   const dispatch = useDispatch();
@@ -17,7 +18,8 @@ const Toolbar = (props) => {
             background: props.background,
             color: props.color,
             height: `${props.height}px`,
-
+            paddingLeft: `${shift()}px`,
+            paddingRight: `${shift()}px`,
           }}>
             {/*<div className='toolbar-wrapper'>*/}
               <div onClick={

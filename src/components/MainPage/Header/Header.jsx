@@ -1,5 +1,6 @@
 import './Header.css'
 import {useEffect, useRef, useState} from "react";
+import winners2 from "../../../images/winners2.png"
 
 const Header = () => {
 
@@ -18,7 +19,7 @@ const Header = () => {
   }
 
   useEffect(() => {
-    setInitialWindowHeight(window.innerHeight * 0.92);
+    setInitialWindowHeight(window.innerHeight);
     window.addEventListener('scroll', (event) => {
       setMoreButton('none');
     });
@@ -26,7 +27,6 @@ const Header = () => {
 
   return (
     <div className='wrapper' style={{height: `${initialWindowHeight}px`}}>
-      {/*<div className='header-image-filter'>*/}
       <img className='header-image'
            style={{
              minHeight: `${initialWindowHeight}px`,
@@ -34,32 +34,16 @@ const Header = () => {
            }}
            src='https://mskrnews.ru/wp-content/uploads/2019/04/moskovskie-shkolniki-zavoevali-67-nagrad-v-finale-vserossijskoj-olimpiady.jpg'
            alt={'olympiad-center'}/>
-      {/*</div>*/}
       <div className='header'>
         <div className='header-text'>
-          Победителями олимпиад становятся здесь
+          Jet School
         </div>
         <div className='header-description'>
-          Поступайте в центр олимпиадной подготовки
-          и прокачивайте свой уровень до победы в таких олимпиадах, как
-          ВСОШ, Эйлера
+          Победителями олимпиад становятся здесь
         </div>
         <button className='header-enroll-button'>
           Записаться на курс
         </button>
-        {/*<div className="header-figure">*/}
-        {/*  {*/}
-        {/*    figureSizes.map(element => {*/}
-        {/*      return <span*/}
-        {/*        className='dot'*/}
-        {/*        style={{*/}
-        {/*          marginTop: `${element}px`,*/}
-        {/*          width: `${1}vw`,*/}
-        {/*          height: `${1}vw`,*/}
-        {/*        }}/>*/}
-        {/*    })*/}
-        {/*  }*/}
-        {/*</div>*/}
         <div ref={bottomOfHeader} className='header-continue' onClick={scrollToBottomOfPage}>
           Узнать подробнее   &#709;
         </div>
