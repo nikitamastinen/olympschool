@@ -17,7 +17,7 @@
 	display: flex;
 	flex-direction: column;
 	height: 8px;
-	background: #006cb8;
+	background: gold;
 }
 
 .timeline-circles {
@@ -37,10 +37,11 @@
 	color: white;
 	display: flex;
 	margin-top: -24px;
-	background: #006cb8;
+	background: gold;
 }
 
 .timeline-items {
+	color: white;
 	padding-bottom: 40px;
 	align-self: start;
 	display: grid;

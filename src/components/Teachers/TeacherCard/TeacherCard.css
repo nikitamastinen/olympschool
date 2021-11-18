@@ -6,14 +6,16 @@
 }
 
 .teacher-card {
-    box-shadow: 0 3px 8px #5e5a5a;
+    border: solid 3px rgb(177, 4, 14);
+    //box-shadow: 0 3px 8px #5e5a5a;
     border-radius: 10px;
     /*height: 300px;*/
     display: flex;
     flex-direction: column;
     width: 100%;
-    background: #f6f6f6;
-    padding: 5px 20px;
+    background: #ffffff;
+    padding: 20px;
+    height: 100%;
 }
 
 .teacher-card-description {
@@ -40,5 +42,6 @@
 .teacher-image {
     border-radius: 100%;
     border: solid 1px #000000;
-    width: 30%;
+    width: 170px;
+    height: 170px;
 }

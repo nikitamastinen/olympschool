@@ -28,12 +28,16 @@ function App() {
     const teachersRef = useRef(null);
     const navigationPageType = useSelector(state => state.page);
     const dispatch = useDispatch();
+   // const [initialWindowHeight, ] = useState(window.innerHeight)
+    const initialWindowHeight = window.innerHeight;
     useEffect(() => {
         if (executeScroll != null) {
             if (navigationPageType === 'enroll') {
                 executeScroll(enrollRef)
             } else if (navigationPageType === 'teachers') {
                 executeScroll(teachersRef)
+            } else if (navigationPageType === 'about') {
+                window.scrollTo(0, initialWindowHeight);
             }
             dispatch({type: "page", payload: 'main'});
         }
@@ -52,7 +56,7 @@ function App() {
     //         height: window.innerHeight,
     //     });
     // }
-
+    //
     // useEffect(() => {
     //     setInitHeight(window.innerHeight);
     //     window.addEventListener("resize", handleResize, false);
@@ -104,10 +108,10 @@ function App() {
                     <MainPage/>
                     {/*<div ref={myRef}>*/}
                     <div ref={enrollRef}/>
-                    <Enroll className='kek' id='kok'/>
+                    <Enroll/>
 
                     <div ref={teachersRef}/>
-                    <Teachers className='kekk'/>
+                    <Teachers/>
 
                     <Cart/>
                 </div>

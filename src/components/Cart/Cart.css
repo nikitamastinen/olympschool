@@ -27,6 +27,33 @@
 
 /*--------------------------------------------------------------------*/
 
+.close-cart {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.7;
+}
+.close-cart:hover {
+  opacity: 1;
+}
+.close-cart:before, .close-cart:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #ffffff;
+}
+.close-cart:before {
+  transform: rotate(45deg);
+}
+.close-cart:after {
+  transform: rotate(-45deg);
+}
+/*---------------------------------------------------------------------------*/
+
 .application {
     display: flex;
     align-items: center;

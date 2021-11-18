@@ -45,7 +45,7 @@ const Header = () => {
           Записаться на курс
         </button>
         <div ref={bottomOfHeader} className='header-continue' onClick={scrollToBottomOfPage}>
-          Узнать подробнее   &#709;
+          &#709; Узнать подробнее   &#709;
         </div>
       </div>
     </div>

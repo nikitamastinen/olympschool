@@ -6,8 +6,15 @@
     justify-content: center;
 }
 
+.arrow {
+    width: 40px;
+    cursor: pointer;
+}
+
 .teachers-ribbon {
-    overflow-y: auto;
+    overflow: hidden;
+    /*overflow: hidden;*/
+    /*overflow: auto;*/
     display: flex;
 
     /*grid-template-columns: 1fr 1fr 1fr;*/
@@ -24,11 +31,27 @@
 @media (max-width: 1300px) {
     .teachers-ribbon > * {
         flex: 0 0 50%;
+        overflow: hidden;
+        /*overflow: scroll;*/
+    }
+
+    .teachers-ribbon {
+        overflow: hidden;
     }
 }
 
 @media (max-width: 780px) {
     .teachers-ribbon > * {
-        flex: 0 0 100%;
+        /*overflow: scroll;*/
+        /*overflow-y: auto;*/
+        flex: 0 0 80%;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    .teachers-ribbon {
+        overflow: auto;
     }
 }

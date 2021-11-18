@@ -25,7 +25,7 @@ const Toolbar = (props) => {
               <div onClick={
                 (event) => handleNavigationChange(event, 'main')
               } className='toolbar-logo-wrapper'>
-                <div className='toolbar-logo'>Центр олимпиадной подготовки
+                <div className='toolbar-logo'>Школа олимпиадной подготовки
                 </div>
               </div>
               <div className='toolbar-navigation'>
@@ -42,7 +42,7 @@ const Toolbar = (props) => {
                   </div>
                 </div>
                 <div onClick={
-                  (event) => handleNavigationChange(event, 'program')
+                  (event) => handleNavigationChange(event, 'about')
                 } className='toolbar-link-wrapper'>
                   <div className='toolbar-link'>О нас
                   </div>
@@ -69,15 +69,21 @@ const Toolbar = (props) => {
               </div>
             </div>
             <div onClick={
-              (event) => handleNavigationChange(event, 'program')
+              (event) => handleNavigationChange(event, 'about')
             } className='toolbar-link-wrapper'>
-              <div className='toolbar-link'> Программа
+              <div className='toolbar-link'> О нас
               </div>
             </div>
             <div onClick={
               (event) => handleNavigationChange(event, 'teachers')
             } className='toolbar-link-wrapper'>
               <div className='toolbar-link'>Преподаватели
+              </div>
+            </div>
+            <div onClick={
+              (event) => handleNavigationChange(event, 'teachers')
+            } className='toolbar-link-wrapper'>
+              <div className='toolbar-link'>Отзывы
               </div>
             </div>
           </div>

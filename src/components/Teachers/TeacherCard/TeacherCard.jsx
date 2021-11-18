@@ -6,9 +6,12 @@ const TeacherCard = (props) => {
       <div className='teacher-card'>
         <div style={{
           display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          alignSelf: 'center',
         }}>
           <img className='teacher-image'
-               src='https://image.shutterstock.com/image-photo/cat-professor-square-academic-hat-600w-1145803769.jpg'
+               src={props.data.image}
                alt='teacher'/>
           <div style={{
             display: 'flex',
@@ -17,7 +20,7 @@ const TeacherCard = (props) => {
             textAlign: 'center',
             width: '100%',
           }}>
-            <h3 style={{marginBottom: '10px'}}>Альфред Нуртдинов</h3>
+            <h3 style={{marginBottom: '10px'}}>{props.data.name}</h3>
           </div>
         </div>
         <div className='teacher-card-description'>
