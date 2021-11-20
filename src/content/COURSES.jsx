@@ -52,6 +52,7 @@ const COURSES = [
     },
     {
         id: 4,
+        color: '#f41500',
         header: 'Олимпиадная математика',
         features: [
             'Занятия внутри небольшой группы',
@@ -63,6 +64,7 @@ const COURSES = [
         price: '3,900 руб'
     },
     {
+        color: '#f41500',
         id: 5,
         header: 'Олимпиадная математика',
         features: [

@@ -12,7 +12,8 @@ body {
 }
 
 * {
-  font-family: Source Sans Pro,Helvetica Neue,Helvetica,Arial,sans-serif;
+  /*font-family: Source Sans Pro,Helvetica Neue,Helvetica,Arial,sans-serif;*/
+  font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
